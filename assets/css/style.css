@@ -180,7 +180,7 @@ a:hover {
 .section {
     padding: 50px 0;
     position: relative;
-    background-image: linear-gradient(rgba(46, 38, 38, 0.7),rgba(61, 46, 51, 0.7)), url(/assets/Imgs/11\ Common\ Questions\ About\ Registering\ a\ Business\ Entity.jfif);
+    background-image: linear-gradient(rgba(46, 38, 38, 0.7),rgba(61, 46, 51, 0.7)), url(/assets/Imgs/11-Common-Questions-About-Registering-a-Business-Entity.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,7 +194,7 @@ a:hover {
 
 @media (max-width: 991px) {
     .section {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 }
 
@@ -317,7 +317,7 @@ a:hover {
 
 @media (max-width: 767px) {
     .section-heading h3 {
-        font-size: 45px;
+        font-size: 35px;
     }
 }
 
@@ -406,6 +406,32 @@ a:hover {
     font-size: 17px;
 }
 
+@media (max-width: 1200px) {
+    #areas-atuacao .row > div {
+        width: 100%; 
+    }
+
+    .feature-box {
+        padding: 8px;
+    }
+
+    .feature-box .icon {
+        font-size: 28px; 
+    }
+
+    .feature-box h5 {
+        font-size: 25px;
+    }
+
+    .feature-box p {
+        font-size: 15px;
+    }
+
+    .feature-box-container {
+        perspective: 800px; 
+    }
+}
+
 @media (max-width: 767px) {
     .feature-box {
         padding: 8px;
@@ -426,6 +452,34 @@ a:hover {
     .feature-box-container {
         perspective: 800px; 
     }
+}
+
+.container {
+    text-align: center; 
+}
+
+.see-more-areas {
+    margin-top: 40px; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.see-more-areas .btn-areas {
+    padding: 16px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+    background: var(--main-color); 
+    color: var(--text-color); 
+    box-shadow: 6px 6px 0 -1px var(--text-color); 
+    transition: all 0.3s ease; 
+}
+
+.see-more-areas .btn-areas:hover {
+    background: var(--text-color); 
+    box-shadow: 5px 5px 0 -2px var(--main-color); 
+    color: #fff; 
 }
 
 /* SOBRE NÓS */
@@ -492,7 +546,7 @@ a:hover {
 .blog {
     padding: 40px;
     text-align: center;
-    background-image: linear-gradient(rgba(46, 38, 38, 0.7),rgba(61, 46, 51, 0.7)), url(/assets/Imgs/11\ Common\ Questions\ About\ Registering\ a\ Business\ Entity.jfif);
+    background-image: linear-gradient(rgba(46, 38, 38, 0.7),rgba(61, 46, 51, 0.7)), url(/assets/Imgs/11-Common-Questions-About-Registering-a-Business-Entity.jpg);
     min-height: 100vh;
     width: 100%;
     background-position: center;
@@ -562,8 +616,8 @@ a:hover {
 }
 
 .blog-layer .btn-more {
-    font-size: 16px;
-    color: black;
+    font-size: 20px;
+    color: var(--text-color);
     text-decoration: none;
     margin-top: 20px;
     font-family: 'Sen', sans-serif;
@@ -578,31 +632,31 @@ a:hover {
 }
 
 .see-more {
-    padding: 5px 5px;
-    font-size: 5px;
-    line-height: 1.5;
-    text-decoration: none;
-    font-weight: 200;
-    text-transform: uppercase;
-    transition: ease all 0.3s;
-    display: inline-block;
-    background: var(--main-color);
-    color: #fff;
-    box-shadow: 6px 6px 0 -1px var(--text-color);
+    margin-top: 40px; 
+    display: flex; 
+    justify-content: center; 
 }
 
 .see-more .btn {
-    font-size: 15px;
+    padding: 16px 24px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+    background: var(--main-color); 
+    color: var(--text-color); 
+    box-shadow: 6px 6px 0 -1px var(--text-color); 
+    transition: all 0.3s ease; 
+    border-radius: 0%;
 }
 
-.see-more:hover {
-    color: #fff;
-    background: var(--text-color);
-    border-color: var(--text-color);
-    box-shadow: 5px 5px 0 -2px var(--main-color);
+.see-more .btn:hover {
+    background: var(--text-color); 
+    box-shadow: 5px 5px 0 -2px var(--main-color); 
+    color: #fff; 
 }
 
-@media (max-width: 1200px) { 
+@media (max-width: 1300px) { 
     .blog-container {
         grid-template-columns: repeat(2, 1fr); 
         gap: 2rem;
@@ -613,7 +667,11 @@ a:hover {
     }
 
     .blog-layer .btn-more {
-        padding-top: 50px;
+        padding-top: 10px;
+    }
+
+    .see-more {
+        padding-bottom: 20px;
     }
 }
 
@@ -626,9 +684,13 @@ a:hover {
     .blog-layer h4 {
         font-size: 2rem; 
     }
+
+    .see-more {
+        padding-bottom: 20px;
+    }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 991px) { 
     .blog-container {
         grid-template-columns: 1fr; 
         gap: 1.5rem;
@@ -644,6 +706,10 @@ a:hover {
 
     .blog-layer a {
         padding: 0.4rem 0.8rem; 
+    }
+
+    .see-more {
+        padding-bottom: 20px;
     }
 }
 
@@ -668,7 +734,7 @@ a:hover {
 
 /* CONTATO */
 .contato-container {
-    padding: 50px;
+    padding: 40px;
 }
 
 .contato-form {
@@ -723,9 +789,8 @@ a:hover {
 }
 
 .contato-infos {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin-left: -100px;
+    text-align: left;
 }
 
 .contato-infos li {
@@ -754,37 +819,159 @@ a:hover {
 }
 
 .contato-infos p {
-    margin: 0;
-    font-size: 20px;
+    margin: 10px 0;
+    font-size: 18px;
     color: #fff;
     font-weight: 500;
+}
+
+@media (max-width: 990px) {
+    .contato-container{
+        padding-bottom: 8px;
+    }
+
+    .contato-infos {
+        margin-left: 0; /* Remover deslocamento lateral em telas pequenas */
+        padding: 5px; /* Adicionar espaçamento interno */
+        text-align: center; /* Centralizar o texto em dispositivos móveis */
+    }
+
+    .contato-infos li {
+        flex-direction: column; /* Empilha os itens (ícone e texto) */
+        align-items: center; /* Centraliza os itens */
+        padding-bottom: 20px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .contato-infos .icon {
+        margin-bottom: 5px; /* Adiciona espaço entre o ícone e o texto */
+    }
+
+    .contato-infos h6 {
+        font-size: 17px; /* Reduz o tamanho do título em telas menores */
+        text-transform: none; /* (Opcional) remove a capitalização */
+    }
+
+    .contato-infos p {
+        font-size: 20px; /* Ajusta o tamanho do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 767px) {
+    .contato-infos {
+        margin-left: 0; /* Remover deslocamento lateral em telas pequenas */
+        padding: 10px; /* Adicionar espaçamento interno */
+        text-align: center; /* Centralizar o texto em dispositivos móveis */
+    }
+
+    .contato-infos li {
+        flex-direction: column; /* Empilha os itens (ícone e texto) */
+        align-items: center; /* Centraliza os itens */
+        padding-bottom: 20px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .contato-infos .icon {
+        margin-bottom: 5px; /* Adiciona espaço entre o ícone e o texto */
+    }
+
+    .contato-infos h6 {
+        font-size: 17px; /* Reduz o tamanho do título em telas menores */
+        text-transform: none; /* (Opcional) remove a capitalização */
+    }
+
+    .contato-infos p {
+        font-size: 20px; /* Ajusta o tamanho do texto */
+        text-align: center; /* Centraliza o texto */
+    }
 }
 
 /* FOOTER */
 .footer {
     background-color: var(--text-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0; 
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.75);
+    position: relative;
 }
 
 .footer-container {
-    padding: 2px 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
 }
 
-.footer .nav a {
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    text-align: center; 
+}
+
+.social-icons a {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.75);
+    margin: 0 10px; 
 }
 
-.footer .nav a:hover {
+.social-icons a:hover {
     color: var(--main-color);
 }
 
-.footer .nav a + a {
-    margin-left: 18px;
+.copyright {
+    flex: 1; 
+    font-size: 14px; 
+    margin: 10px 0;
 }
+
+.footer-iconTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background: var(--main-color);
+    border-radius: 0.6rem;
+    transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 0.8rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 1.6rem; 
+    color: var(--second-bg-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .social-icons {
+        margin-bottom: 10px; 
+    }
+
+    .copyright {
+        margin-bottom: 10px; 
+    }
+
+    .footer-iconTop {
+        margin-bottom: 10px; 
+    }
+}
+
+
+
+
+
 
 
 

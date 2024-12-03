@@ -43,6 +43,7 @@ a:hover {
     left: 0;
     right: 0;
     z-index: 11;
+    pointer-events: auto;
     background: transparent;
     transition: 0.3s background;
 }
@@ -183,230 +184,93 @@ a:hover {
     align-items: center;
     min-height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(236, 197, 197, 0.397),rgba(95, 83, 87, 0.411)), url(/assets/Imgs/blog/1708_post_acordo.png);
+    background-image: linear-gradient(rgba(236, 197, 197, 0.7),rgba(95, 83, 87, 0.7)), url(/assets/Imgs/livros-de-direito.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
 .heading {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 36px;
-    font-family: Sen;
-    color: var(--text-color);
-}
-
-.heading::after {
-    content: '';
-    width: 96px;
-    height: 4px;
-    background-color: var(--main-color);
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
-/* POST */
-.articles {
-    padding: 30px; 
-    padding-bottom: 2px;
-}
-
-.articles-container {
-    padding: 20px 0;
-    max-width: 900px;
-    margin: 0 auto;
-    color: var(--text-color);
-}
-
-.articles-title {
-    font-size: 34px;
-    font-weight: bold;
-    color: var(--main-color);
-    margin-bottom: 10px;
-    font-family: Sen;
-}
-
-.articles-date {
-    font-size: 14px;
-    color: black;
-    margin-bottom: 2rem;
-    opacity: 0.8;
-    font-family: Sen;
-}
-
-.articles-content p {
-    text-align: justify;   
-    text-indent: 50px;     
-    margin-bottom: 30px;
-    line-height: 1.6;   
-    font-family: Sen;     
-}
-
-.articles-content {
-    font-size: 18px;
-    line-height: 1.6;
-    font-family: Sen;
-}
-
-/* BLOG */
-.blog {
-    padding: 40px;
-    text-align: center;
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    background-attachment: fixed;
-}
-
-.blog-container {
     padding-top: 50px;
-    padding-bottom: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-    gap: 2px;
-}
-
-.blog-container .blog-box {
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%; 
-    margin: 0 auto; 
-}
-
-.blog-box img {
-    width: 100%; 
-    height: auto; 
-    transition: transform 0.5s ease;
-    object-fit: cover; 
-}
-
-.blog-box:hover img {
-    transform: scale(1.1); 
-}
-
-.blog-box .blog-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
+    font-size: 40px;
+    font-family: Sen;
+    color: #fff;
+}
+
+/* ÁREAS DE ATUAÇÃO */
+.areas-atuacao {
+    text-align: center;
+    padding: 60px;
+}
+
+.areas-atuacao-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.areas-atuacao-box {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    padding: 50px;
+    background-image: linear-gradient(rgba(202, 134, 134, 0.452),rgba(180, 133, 149, 0.445)), url(/assets/Imgs/istockphoto-1452842087-612x612.jpg);
+    box-shadow: 0 0 10px;
+    transition: transform 0.3s;
+}
+
+.areas-atuacao-box:hover {
+    transform: scale(1.05);
+}
+
+.areas-atuacao-box h3 {
+    font-size: 24px;
+    text-align: center;
+    font-family: Sen;
+    color: #fff;
+}
+
+.areas-atuacao-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--main-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.5s ease;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.blog-box:hover .blog-layer {
-    transform: translateY(0);
+.areas-atuacao-box:hover .areas-atuacao-layer {
+    opacity: 1;
 }
 
-.blog-layer .btn-more {
-    font-size: 20px;
-    color: var(--text-color);
+.areas-atuacao-layer h4 {
+    margin-bottom: 10px;
+    font-size: 21px;
+    margin: 15px;
+    font-family: Sen;
+}
+
+.areas-atuacao-layer p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: Sen;
+}
+
+.areas-atuacao-layer a {
+    color: #fff;
     text-decoration: none;
-    margin-top: 20px;
-    font-family: 'Sen', sans-serif;
-    padding: 0.5rem 1rem;
-    background-color: var(--second-bg-color);
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.blog-layer a:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.see-more {
-    margin-top: 40px; 
-    display: flex; 
-    justify-content: center; 
-}
-
-.see-more .btn {
-    padding: 16px 24px; 
-    font-size: 16px; 
-    font-weight: bold; 
-    text-transform: uppercase; 
-    text-decoration: none; 
-    background: var(--main-color); 
-    color: var(--text-color); 
-    box-shadow: 6px 6px 0 -1px var(--text-color); 
-    transition: all 0.3s ease; 
-    border-radius: 0%;
-}
-
-.see-more .btn:hover {
-    background: var(--text-color); 
-    box-shadow: 5px 5px 0 -2px var(--main-color); 
-    color: #fff; 
-}
-
-@media (max-width: 1024px) { 
-    .blog-container {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 2rem;
-    }
-
-    .blog-layer h4 {
-        font-size: 2rem; 
-    }
-}
-
-@media (max-width: 768px) { 
-    .blog-container {
-        grid-template-columns: 1fr; 
-        gap: 1.5rem;
-    }
-
-    .blog-box {
-        width: 100%; 
-    }
-
-    .blog-layer h4 {
-        font-size: 1.8rem;
-    }
-
-    .blog-layer a {
-        padding: 0.4rem 0.8rem; 
-    }
-}
-
-@media (max-width: 480px) { 
-    .blog-container {
-        padding: 10px; 
-    }
-
-    .blog-box {
-        width: 100%; 
-        margin: 0; 
-    }
-
-    .blog-layer h4 {
-        font-size: 1.6rem; 
-    }
-
-    .blog-layer a {
-        padding: 0.3rem 0.6rem;
-    }
+    margin: 15px;
+    font-family: Sen;
 }
 
 /* CONTATO */

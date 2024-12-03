@@ -26,3 +26,18 @@ $.scrollIt({
     topOffset: -70
 });
 
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.querySelector('[name="name"]');
+    const email = document.querySelector('[name="email"]');
+    const message = document.querySelector('[name="message"]');
+    if (!name.value || !email.value || !message.value) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+    } else {
+        alert("Mensagem enviada com sucesso!");
+        this.reset();
+    }
+});
+
+
+

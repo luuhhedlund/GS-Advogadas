@@ -370,9 +370,29 @@ a:hover {
     }
 }
 
+@media (max-width: 520px) {
+    .blog {
+        padding: 40px 100px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .blog {
+        padding: 40px 100px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* CONTATO */
 .contato-container {
-    padding: 50px;
+    padding: 40px;
 }
 
 .contato-form {
@@ -427,9 +447,8 @@ a:hover {
 }
 
 .contato-infos {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin-left: -100px;
+    text-align: left;
 }
 
 .contato-infos li {
@@ -458,34 +477,151 @@ a:hover {
 }
 
 .contato-infos p {
-    margin: 0;
-    font-size: 20px;
+    margin: 10px 0;
+    font-size: 18px;
     color: #fff;
     font-weight: 500;
+}
+
+@media (max-width: 990px) {
+    .contato-container{
+        padding-bottom: 8px;
+    }
+
+    .contato-infos {
+        margin-left: 0; /* Remover deslocamento lateral em telas pequenas */
+        padding: 5px; /* Adicionar espaçamento interno */
+        text-align: center; /* Centralizar o texto em dispositivos móveis */
+    }
+
+    .contato-infos li {
+        flex-direction: column; /* Empilha os itens (ícone e texto) */
+        align-items: center; /* Centraliza os itens */
+        padding-bottom: 20px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .contato-infos .icon {
+        margin-bottom: 5px; /* Adiciona espaço entre o ícone e o texto */
+    }
+
+    .contato-infos h6 {
+        font-size: 17px; /* Reduz o tamanho do título em telas menores */
+        text-transform: none; /* (Opcional) remove a capitalização */
+    }
+
+    .contato-infos p {
+        font-size: 20px; /* Ajusta o tamanho do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 767px) {
+    .contato-infos {
+        margin-left: 0; /* Remover deslocamento lateral em telas pequenas */
+        padding: 10px; /* Adicionar espaçamento interno */
+        text-align: center; /* Centralizar o texto em dispositivos móveis */
+    }
+
+    .contato-infos li {
+        flex-direction: column; /* Empilha os itens (ícone e texto) */
+        align-items: center; /* Centraliza os itens */
+        padding-bottom: 20px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .contato-infos .icon {
+        margin-bottom: 5px; /* Adiciona espaço entre o ícone e o texto */
+    }
+
+    .contato-infos h6 {
+        font-size: 17px; /* Reduz o tamanho do título em telas menores */
+        text-transform: none; /* (Opcional) remove a capitalização */
+    }
+
+    .contato-infos p {
+        font-size: 20px; /* Ajusta o tamanho do texto */
+        text-align: center; /* Centraliza o texto */
+    }
 }
 
 /* FOOTER */
 .footer {
     background-color: var(--text-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0; 
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.75);
+    position: relative;
 }
 
 .footer-container {
-    padding: 2px 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
 }
 
-.footer .nav a {
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    text-align: center; 
+}
+
+.social-icons a {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.75);
+    margin: 0 10px; 
 }
 
-.footer .nav a:hover {
+.social-icons a:hover {
     color: var(--main-color);
 }
 
-.footer .nav a + a {
-    margin-left: 18px;
+.copyright {
+    flex: 1; 
+    font-size: 14px; 
+    margin: 10px 0;
+}
+
+.footer-iconTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background: var(--main-color);
+    border-radius: 0.6rem;
+    transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 0.8rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 1.6rem; 
+    color: var(--second-bg-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .social-icons {
+        margin-bottom: 10px; 
+    }
+
+    .copyright {
+        margin-bottom: 10px; 
+    }
+
+    .footer-iconTop {
+        margin-bottom: 10px; 
+    }
 }
